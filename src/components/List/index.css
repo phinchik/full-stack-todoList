@@ -1,0 +1,50 @@
+.item {
+  height: 50px;
+  width: 500px;
+  border: 1px solid rgb(197, 195, 195);
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  font-size: 20px;
+}
+.input {
+  width: 30px;
+  height: 50px;
+  font-size: 20px;
+}
+.ul {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 0;
+}
+.cancelUpdateButton {
+  justify-content: flex-end;
+  background-color: none;
+  border: none;
+}
+.updateButton {
+  justify-content: flex-end;
+}
+
+.updateInput {
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.cancelText {
+  align-self: center;
+}
+.textContainer {
+  width: 450px;
+  display: flex;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.text {
+  text-align: center;
+  font-size: 20px;
+}

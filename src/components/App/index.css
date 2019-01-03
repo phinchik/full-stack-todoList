@@ -1,0 +1,42 @@
+.header {
+  color: white;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  background-color: rgb(43, 173, 224);
+  margin-bottom: 0;
+}
+
+.appContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.deleteContainer {
+  width: 500px;
+  background-color: none;
+  height: 50px;
+  border: 1px solid rgb(197, 195, 195);
+  margin-top: 0;
+  display: flex;
+}
+
+.deleteAll {
+  width: 250px;
+  background-color: none;
+  height: 50px;
+  border: 1px solid rgb(197, 195, 195);
+  margin-top: 0;
+}
+
+.todoCount {
+  width: 250px;
+  background-color: none;
+  height: 50px;
+  border: 1px solid rgb(197, 195, 195);
+  margin-top: 0;
+}
