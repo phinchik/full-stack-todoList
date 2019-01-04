@@ -59,10 +59,10 @@
 }
 
 input[type="checkbox"] {
-  width: 20px; /*Desired width*/
-  height: 20px; /*Desired height*/
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  -webkit-transform: scale(2); /* Safari and Chrome */
+  -webkit-transform: scale(2);
   justify-content: center;
   margin-top: 15px;
   margin: 20px;

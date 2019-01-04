@@ -1,23 +1,35 @@
-# ToDo App with REST API
+# Full-Stack ToDo Application
 
-### Getting Started
+# Preview
 
-There are two methods for getting started with this repo.
+![newtodo](https://user-images.githubusercontent.com/38735598/50670113-230f1e00-0f7e-11e9-9163-0354a7bf72a8.gif)
 
-#### Familiar with Git?
+# How to Clone and Run
 
-Checkout this repo, install dependencies, then start the gulp process with the following:
+- git clone https://github.com/phinchik/full-stack-todoList
+- cd full-stack-todoList
+- npm install
+- npm start both server and client
 
-```
-> git clone https://github.com/phinchik/full-stack-todoList
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+# Author
 
-## To Run
+- Jenny Rose Gutierrez
 
-```
-> npm install
-> npm start
-```
+# Technologies Used
+
+- React
+- Redux/Redux-Thunk
+- Node
+- Express
+- Rest API
+- MongoDB
+
+# Features
+
+- Add Todo
+- Delete Todo
+- Update Todo
+- Cancel Update mode
+- Toggle Todo
+- Delete All Toggled Todo
+- Number of Todo
