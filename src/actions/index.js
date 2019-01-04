@@ -69,7 +69,7 @@ export const addTodo = inputVal => {
   };
 };
 
-export const updateTodo = (id, input, completed) => {
+export const updateTodo = (e, id, input, completed) => {
   return dispatch => {
     fetch(`${URL}/todo`, {
       headers: {

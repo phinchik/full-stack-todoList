@@ -24,15 +24,6 @@ class App extends Component {
     });
   };
 
-  completedTodos = () => {
-    this.props.todos &&
-      this.props.todos.map(todos => {
-        if (todos.completed === true) {
-          return todos;
-        }
-      });
-  };
-
   deleteAll = () => {
     let completedTodos =
       this.props.todos &&
@@ -50,25 +41,18 @@ class App extends Component {
       <div className={styles.appContainer}>
         <div className={styles.todoContainer}>
           <h1 className={styles.header}>TODOS</h1>
-          <InputTodo
-            updateTodoList={this.updateTodoList}
-            todoList={this.state.todoList}
-          />
-          <List
-            todoList={this.state.todoList}
-            updateTodoList={this.updateTodoList}
-          />
+          <InputTodo />
+          <List />
           <div className={styles.deleteContainer}>
-            {this.props.todos.map(todo => {
-              console.log(todo.completed);
-            })}
+            <span className={styles.todoCount}>
+              {`Todos Count : ${this.props.todos.length}`}
+            </span>
             <button
               className={styles.deleteAll}
               onClick={() => this.deleteAll()}
             >
               DELETE ALL
             </button>
-            <span className={styles.todoCount}>{this.props.todos.length}</span>
           </div>
         </div>
       </div>

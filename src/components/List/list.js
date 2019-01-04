@@ -14,8 +14,7 @@ class List extends Component {
     this.state = {
       edit: false,
       id: null,
-      inputChange: null,
-      checkedTodos: []
+      inputChange: null
     };
   }
 
@@ -50,7 +49,16 @@ class List extends Component {
                   className={styles.updateInput}
                   value={getValue(todoItem.text)}
                   onChange={e => this.setState({ inputChange: e.target.value })}
+                  onKeyPress={e =>
+                    this.updateTodo(
+                      e,
+                      todoItem._id,
+                      this.state.inputChange,
+                      todoItem.completed
+                    )
+                  }
                 />
+
                 <IconButton
                   className={styles.cancelUpdateButton}
                   onClick={() =>
@@ -62,20 +70,6 @@ class List extends Component {
                 >
                   <Typography className={styles.cancelText}>X</Typography>
                 </IconButton>
-                <Button
-                  className={styles.updateButton}
-                  variant="outlined"
-                  color="primary"
-                  onClick={() =>
-                    this.updateTodo(
-                      todoItem._id,
-                      this.state.inputChange,
-                      todoItem.completed
-                    )
-                  }
-                >
-                  Update
-                </Button>
               </li>
             ) : (
               <li key={todoItem._id} className={styles.item}>
@@ -100,7 +94,10 @@ class List extends Component {
                   <p className={styles.text}>{todoItem.text}</p>
                 </span>
 
-                <IconButton onClick={() => this.deleteTodo(todoItem._id)}>
+                <IconButton
+                  className={styles.delete}
+                  onClick={() => this.deleteTodo(todoItem._id)}
+                >
                   <DeleteIcon />
                 </IconButton>
               </li>
@@ -114,9 +111,11 @@ class List extends Component {
     this.props.deleteTodo(id);
   };
 
-  updateTodo = (id, input, completed) => {
-    this.props.updateTodo(id, input, completed);
-    this.setState({ edit: !this.state.edit });
+  updateTodo = (e, id, input, completed) => {
+    if (e.key == "Enter") {
+      this.props.updateTodo(e, id, input, completed);
+      this.setState({ edit: !this.state.edit, inputChange: "" });
+    }
   };
 }
 

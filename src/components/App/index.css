@@ -14,29 +14,40 @@
   width: 500px;
   margin: 50px auto;
   text-align: center;
+  background-color: rgb(250, 244, 237);
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
 .deleteContainer {
   width: 500px;
-  background-color: none;
+  background-color: transparent;
   height: 50px;
-  border: 1px solid rgb(197, 195, 195);
+  border: none;
   margin-top: 0;
   display: flex;
+  position: relative;
+  top: 0;
 }
 
 .deleteAll {
   width: 250px;
-  background-color: none;
+  background-color: transparent;
   height: 50px;
-  border: 1px solid rgb(197, 195, 195);
-  margin-top: 0;
+  border: none;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.deleteAll:focus {
+  outline: 0;
 }
 
 .todoCount {
   width: 250px;
   background-color: none;
   height: 50px;
-  border: 1px solid rgb(197, 195, 195);
-  margin-top: 0;
+  border: none;
+  font-size: 25px;
 }
